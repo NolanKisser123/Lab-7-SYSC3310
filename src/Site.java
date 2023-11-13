@@ -6,9 +6,7 @@ public abstract class Site {
         return base + tax;
     }
 
-    protected abstract double getBaseAmount(int units, double rate);
+    public abstract double getBaseAmount(int units, double rate);
 
-    protected double getTaxAmount(double base) {
-        return base * TAX_RATE;
-    }
+    public abstract double getTaxAmount(double base);
 }
