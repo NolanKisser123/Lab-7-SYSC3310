@@ -1,7 +1,6 @@
-public class LifelineSite {
-    public double getBillableAmount(int units, double rate){
-        double base = units * rate * 0.5;
-        double tax = base * Site.TAX_RATE;
-        return base + tax;
+public class LifelineSite extends Site {
+    @Override
+    protected double getBaseAmount(int units, double rate) {
+        return units * rate * 0.5;
     }
 }
